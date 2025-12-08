@@ -1,8 +1,19 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+from app.db.base import init_db
+from app.db.models import Task
+from app.routes import tasks
 
-app = FastAPI()
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await init_db()
+    print("База данных инициализирована")
+    yield
+
+app = FastAPI(lifespan=lifespan)
+app.include_router(tasks.router)
 
 origins = [
     "http://localhost:5173",
@@ -26,4 +37,3 @@ def on_startup():
 @app.get("/")
 async def root():
     return {"message": "Hello, World!"}
-

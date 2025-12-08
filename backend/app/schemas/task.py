@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from models.task import Status
+from app.models.task import Status
 from typing import Optional
 from datetime import datetime
 
