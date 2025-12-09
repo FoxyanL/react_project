@@ -1,0 +1,221 @@
+/* Task Card - Spider theme */
+.task-card {
+  background: linear-gradient(135deg, 
+    rgba(26, 10, 46, 0.8) 0%, 
+    rgba(10, 0, 21, 0.9) 100%);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(138, 43, 226, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    #8a2be2 0%, 
+    #dc143c 50%, 
+    #00ff41 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(138, 43, 226, 0.3);
+  border-color: rgba(138, 43, 226, 0.6);
+}
+
+.task-card:hover::before {
+  opacity: 1;
+}
+
+/* Header */
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.task-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+  flex: 1;
+}
+
+/* Status badge */
+.task-status {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.status-в_ожидании,
+.status-в.ожидании {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.4);
+}
+
+.status-в_процессе,
+.status-в.процессе {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.4);
+}
+
+.status-завершено {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+/* Description */
+.task-description {
+  color: #c9a7eb;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.9;
+}
+
+/* Footer */
+.task-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+/* Dates */
+.task-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.task-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a78bcc;
+  font-size: 0.9rem;
+}
+
+.date-icon {
+  width: 18px;
+  height: 18px;
+  color: #8a2be2;
+}
+
+.date-label {
+  font-weight: 500;
+}
+
+.date-label-small {
+  font-size: 0.8rem;
+  color: #7a6b9a;
+  font-style: italic;
+}
+
+/* Actions */
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(138, 43, 226, 0.4);
+  background: rgba(138, 43, 226, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.task-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #c9a7eb;
+  transition: color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: rgba(33, 150, 243, 0.2);
+  border-color: rgba(33, 150, 243, 0.6);
+  box-shadow: 0 0 15px rgba(33, 150, 243, 0.4);
+}
+
+.edit-btn:hover svg {
+  color: #2196f3;
+}
+
+.delete-btn:hover {
+  background: rgba(220, 20, 60, 0.2);
+  border-color: rgba(220, 20, 60, 0.6);
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+}
+
+.delete-btn:hover svg {
+  color: #dc143c;
+}
+
+.task-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-card {
+    padding: 1rem;
+  }
+  
+  .task-card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .task-title {
+    font-size: 1.1rem;
+  }
+  
+  .task-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

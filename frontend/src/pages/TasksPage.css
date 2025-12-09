@@ -1,0 +1,44 @@
+/* Tasks Page */
+.tasks-page {
+  min-height: calc(100vh - 80px);
+  background: radial-gradient(ellipse at top, #1a0a2e 0%, #0a0015 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background web pattern */
+.tasks-page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-web {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: web-float 20s ease-in-out infinite;
+}
+
+@keyframes web-float {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translate(20px, -20px) rotate(2deg); 
+    opacity: 0.15;
+  }
+}
+
+/* Ensure content is above background */
+.tasks-page > *:not(.tasks-page-background) {
+  position: relative;
+  z-index: 1;
+}

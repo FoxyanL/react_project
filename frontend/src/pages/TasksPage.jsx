@@ -1,9 +1,15 @@
 import TaskList from "../components/TaskList";
+import WebBackground from "../components/WebBackground";
+import './TasksPage.css';
 
-function TasksPage(){
+function TasksPage() {
     return (
-        <div>
-            <h1>Страница задач</h1>
+        <div className="tasks-page">
+            <div className="tasks-page-background">
+                <WebBackground opacity={0.1} />
+            </div>
+            
+            <TaskList />
         </div>
     );
 }
