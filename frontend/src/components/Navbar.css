@@ -1,4 +1,3 @@
-/* Spider-themed navbar */
 .spider-navbar {
   position: relative;
   display: flex;
@@ -16,7 +15,6 @@
   z-index: 1000;
 }
 
-/* Web decoration line */
 .navbar-web-line {
   position: absolute;
   bottom: 0;
@@ -37,14 +35,12 @@
   100% { transform: translateX(100%); }
 }
 
-/* Brand section */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* Spider logo */
 .spider-logo {
   width: 50px;
   height: 50px;
@@ -57,7 +53,6 @@
   height: 100%;
 }
 
-/* Navbar title */
 .navbar-title {
   margin: 0;
   display: flex;
@@ -84,7 +79,6 @@
   color: #dc143c;
 }
 
-/* Navigation links */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -125,7 +119,6 @@
   filter: drop-shadow(0 0 5px rgba(138, 43, 226, 0.8));
 }
 
-/* Active link */
 .nav-link.active {
   color: #fff;
   text-shadow: 
@@ -150,7 +143,6 @@
   box-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
 }
 
-/* Glowing orb decoration */
 .navbar-orb {
   position: absolute;
   top: 50%;
@@ -166,7 +158,6 @@
   filter: blur(40px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .spider-navbar {
     padding: 1rem 1.5rem;
