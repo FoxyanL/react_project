@@ -1,4 +1,3 @@
-/* Task Card - Spider theme */
 .task-card {
   background: linear-gradient(135deg, 
     rgba(26, 10, 46, 0.8) 0%, 
@@ -42,7 +41,6 @@
   opacity: 1;
 }
 
-/* Header */
 .task-card-header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +58,6 @@
   flex: 1;
 }
 
-/* Status badge */
 .task-status {
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -72,27 +69,24 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.status-в_ожидании,
-.status-в.ожидании {
+.status-waiting {
   background: rgba(255, 193, 7, 0.2);
   color: #ffc107;
   border: 1px solid rgba(255, 193, 7, 0.4);
 }
 
-.status-в_процессе,
-.status-в.процессе {
+.status-in-progress {
   background: rgba(33, 150, 243, 0.2);
   color: #2196f3;
   border: 1px solid rgba(33, 150, 243, 0.4);
 }
 
-.status-завершено {
+.status-complete {
   background: rgba(76, 175, 80, 0.2);
   color: #4caf50;
   border: 1px solid rgba(76, 175, 80, 0.4);
 }
 
-/* Description */
 .task-description {
   color: #c9a7eb;
   font-size: 1rem;
@@ -101,7 +95,6 @@
   opacity: 0.9;
 }
 
-/* Footer */
 .task-card-footer {
   display: flex;
   justify-content: space-between;
@@ -111,7 +104,6 @@
   border-top: 1px solid rgba(138, 43, 226, 0.2);
 }
 
-/* Dates */
 .task-dates {
   display: flex;
   flex-direction: column;
@@ -143,7 +135,6 @@
   font-style: italic;
 }
 
-/* Actions */
 .task-actions {
   display: flex;
   gap: 0.5rem;
@@ -194,7 +185,6 @@
   transform: scale(0.95);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .task-card {
     padding: 1rem;

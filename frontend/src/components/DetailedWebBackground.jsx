@@ -3,7 +3,7 @@ function DetailedWebBackground() {
     <div className="web-background">
       <svg className="web-svg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
         <g className="web-lines">
-          {/* Main radial threads - 16 directions */}
+          {/* 16 нитей */}
           {[0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5].map((angle, i) => {
             const rad = (angle * Math.PI) / 180;
             const x2 = 600 + Math.cos(rad) * 600;
@@ -23,7 +23,7 @@ function DetailedWebBackground() {
             );
           })}
           
-          {/* Circular web threads - 8 concentric circles */}
+          {/* 8 кругов */}
           {[60, 100, 150, 200, 260, 320, 390, 470].map((radius, i) => (
             <circle 
               key={`circle-${i}`}
@@ -38,7 +38,7 @@ function DetailedWebBackground() {
             />
           ))}
           
-          {/* Decorative droplets */}
+          {/* капельки */}
           {[
             { cx: 450, cy: 300, r: 3 },
             { cx: 750, cy: 280, r: 2.5 },

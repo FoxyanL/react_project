@@ -4,7 +4,6 @@ import EditIcon from './icons/EditIcon';
 import DeleteIcon from './icons/DeleteIcon';
 
 function TaskCard({ task }){
-    // Форматирование даты
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('ru-RU', { 
@@ -16,19 +15,18 @@ function TaskCard({ task }){
         });
     };
 
-    // Маппинг статусов на русский
     const statusLabels = {
-        'в ожидании': 'Ожидает',
-        'в процессе': 'В работе',
-        'завершено': 'Завершено'
+        'Ожидает': 'waiting',
+        'В работе': 'in-progress',
+        'Завершен': 'complete'
     };
 
     return (
         <div className="task-card">
             <div className="task-card-header">
                 <h3 className="task-title">{task.title}</h3>
-                <span className={`task-status status-${task.status}`}>
-                    {statusLabels[task.status] || task.status}
+                <span className={`task-status status-${statusLabels[task.status]}`}>
+                    {task.status}
                 </span>
             </div>
             

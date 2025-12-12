@@ -4,9 +4,9 @@ from typing import Optional, List
 from datetime import datetime
 
 class Status(str, Enum):
-    PENDING = "в ожидании"
-    IN_PROGRESS = "в процессе"
-    COMPLETED = "завершено"
+    PENDING = "Ожидает"
+    IN_PROGRESS = "В работе"
+    COMPLETED = "Завершен"
 
 class Base(BaseModel):
     id: int

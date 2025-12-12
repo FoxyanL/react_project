@@ -12,7 +12,7 @@ function AnimatedSpiderLogo({ size = 200 }) {
         <circle cx="100" cy="100" r="30" fill="url(#spiderGradient)" />
         <ellipse cx="100" cy="80" rx="20" ry="25" fill="url(#spiderGradient)" />
         
-        {/* Legs */}
+        {/* лапки */}
         {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
           const rad = (angle * Math.PI) / 180;
           const x1 = 100 + Math.cos(rad) * 30;

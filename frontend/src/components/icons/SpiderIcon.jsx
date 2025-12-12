@@ -4,7 +4,7 @@ function SpiderIcon({ className = "" }) {
       <circle cx="50" cy="50" r="15" fill="url(#logoGradient)" />
       <ellipse cx="50" cy="40" rx="10" ry="12" fill="url(#logoGradient)" />
       
-      {/* Spider legs */}
+      {/* лапки */}
       {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
         const rad = (angle * Math.PI) / 180;
         const x1 = 50 + Math.cos(rad) * 15;

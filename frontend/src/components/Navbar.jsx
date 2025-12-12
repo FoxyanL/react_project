@@ -15,11 +15,10 @@ function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Web decoration line */}
       <div className="navbar-web-line"></div>
 
       <div className='navbar-brand'>
-        {/* Spider icon */}
+        {/* иконка паука */}
         <motion.div 
           className="spider-logo"
           whileHover={{ rotate: 360, scale: 1.2 }}
@@ -62,7 +61,7 @@ function Navbar() {
         </Link>
       </div>
 
-      {/* Animated glowing orb */}
+      {/* подписка снизу навбара */}
       <motion.div 
         className="navbar-orb"
         animate={{

@@ -1,4 +1,3 @@
-/* Tasks Page */
 .tasks-page {
   min-height: calc(100vh - 80px);
   background: radial-gradient(ellipse at top, #1a0a2e 0%, #0a0015 100%);
@@ -6,7 +5,6 @@
   overflow-x: hidden;
 }
 
-/* Background web pattern */
 .tasks-page-background {
   position: fixed;
   top: 0;
@@ -37,7 +35,7 @@
   }
 }
 
-/* Ensure content is above background */
+
 .tasks-page > *:not(.tasks-page-background) {
   position: relative;
   z-index: 1;
